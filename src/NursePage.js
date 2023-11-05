@@ -4,13 +4,21 @@ import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
 
 function NursePage() {
   const [patientList, setPatientList] = useState([]);
+  const [deletionID, setDeletionID] = useState('');
   const navigate = useNavigate();
 
+  const deleteIDselect = (id) => {
+    setDeletionID(id)
+  }
   const patientView = () => {
     navigate(`/`);
   };
 
   const removePatient = (index) => {
+    deleteIDselect(patientList[index]._id)
+    axios.post('http://localhost:5000/delete', patientList[index]._id)
+    
+
     const updatedList = [...patientList];
     updatedList.splice(index, 1);
     setPatientList(updatedList);
@@ -20,9 +28,13 @@ function NursePage() {
     // Function to fetch patient data
     const fetchPatientData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/process_data'); // Adjust the endpoint to match your Flask route
+        const response = await axios.get('http://localhost:5000/patients');
         const data = response.data;
-        setPatientList(data);
+        if (Array.isArray(data)) {
+          setPatientList(data);
+        } else {
+          console.error('Data is not an array');
+        }
       } catch (error) {
         console.error('Error fetching patient data', error);
       }
