@@ -48,15 +48,15 @@ def get_patients():
     try:
         # Serialize the patient data to send as JSON
         
-
-        patients_data = [{
-            'name': patient.get_name(),
-            'age': patient.get_age(),
-            'severity': patient.get_severity(),
-            'symptoms_duration': patient.get_list_of_symptoms_durations(),
-            'score': patient.get_score(),
-            'pastHistory' : patient.patient_history
-        } for patient in patients_list]
+        if patients_list:
+            patients_data = [{
+                'name': patient.get_name(),
+                'age': patient.get_age(),
+                'severity': patient.get_severity(),
+                'symptoms_duration': patient.get_list_of_symptoms_durations(),
+                'score': patient.get_score(),
+                'pastHistory' : patient.patient_history
+            } for patient in patients_list]
 
         return jsonify(patients_data), 200
     except Exception as e:
@@ -67,7 +67,10 @@ def delete():
     data = request.json
     try:
         print("hi")
-        id_to_delete = data['id']
+        id_to_delete = data['name']
+        for patient in patients_list:
+            if patient.name == data['name']:
+                patients_list.remove(patient)
         return jsonify({'message': 'Data deleted successfully'})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
