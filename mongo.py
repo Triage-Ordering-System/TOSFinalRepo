@@ -20,7 +20,7 @@ def add_patient(patient):
     todo1 = {"name" : str(patient.get_name()), "age": int(patient.get_age()), "symptoms": symptoms, "durations": durations, "severity": patient.get_severity(), "Past History": patient.patient_history, "score": patient.score}
     
     todos = db.Patient
-    
+    todos.delete_one({"_id" : id})
     result = todos.insert_one(todo1)
    
 
@@ -40,14 +40,17 @@ def add_patient(patient):
     # Return the name of the JSON file that contains all the patient data
     return json_filename
 
-def remove_patient(patient):
+def remove_patient(id):
+    # Convert the id to ObjectId
+    patient_id = ObjectId(id)
+    
     cluster = "mongodb+srv://DNSNate:2003@cluster0.gn4y1m0.mongodb.net/Patient_report?retryWrites=true&w=majority"
     client = MongoClient(cluster)
     db = client.Patient_report
     
     todos = db.Patient
     
-    todos.delete_one({"name" : str(patient.get_name()), "age": int(patient.get_age()),"score": patient.score})
+    todos.delete_one({"_id" : patient_id})
     all_patients_data = list(todos.find().sort("score", -1))
 
     # Convert all documents to a JSON-serializable format
@@ -63,6 +66,5 @@ def remove_patient(patient):
 
     # Return the name of the JSON file that contains all the patient data
     return json_filename
-
 
 
