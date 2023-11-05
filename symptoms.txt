@@ -1,55 +1,16 @@
-Nausea and vomiting: 5 6 8
-Back pain: 6 0 0
-Cough: 4 0 0
-Seizures: 8 0 0
-Bleeding: 7 0 0
-Allergic reactions: 6 0 0
-Fractures: 9 0 0
-Skin infections and abscesses: 5 0 0 
-Respiratory distress: 7 0 0
-Fever in children: 4 0 0
-Burns: 7 0 0
-Stroke symptoms: 8 0 0 
-Overdose or poisoning: 9 0 0
-Confusion: 6 0 0
-Disorientation: 7 0 0
-Lethargy: 6 0 0
-Somnolence: 5 0 0 
-Stupor: 8 0 0
-Obtundation: 7 0 0
-Delirium: 8 0 0
-Agitation: 6 0 0
-Coma: 10 0 0
-Aphasia: 7 0 0
-Apraxia: 6 0 0
-Agnosia: 7 0 0
-Hallucinations: 8 0 0
-Memory Impairment: 6 0 0
-Personality Changes: 7 0 0
-Inattention: 4 0 0
-Incoherence: 6 0 0
-Amnesia: 7 0 0
-Psychosis: 8 0 0
-Dissociation: 6 0 0
-Cuts and Lacerations: 4 0 0
-Bruises and Contusions: 3 0 0
-Sprains: 4 0 0
-Strains: 4 0 0
-Fractures: 7 0 0
-Dislocations: 7 0 0
-Burns: 6 0 0
-Abrasions: 4 0 0
-Concussions: 7 0 0
-Head Injuries: 7 0 0
-Whiplash: 6 0 0
-Blood Clots: 8 0 0
-Sprained Ankles: 4 0 0
-Bites: 6 0 0
-Stings: 4 0 0
-Eye Injuries: 7 0 0
-Nosebleeds: 3 0 0
-Foreign Object Injuries: 6 0 0
-Broken Teeth: 7 0 0
-Dental Injuries: 6 0 0
-Soft Tissue Injuries: 5 0 0
-Overuse Injuries: 4 0 0
+Nausea and vomiting: 5 5 6
+Seizures: 8 8 8
+Bleeding: 7 5 7
+Allergic reactions: 6 8 8
+Fractures: 9 7 9
+Skin infections and abscesses: 5 5 6
+Respiratory distress: 7 6 7
+Burns: 7 8 9
+Disorientation: 7 6 7
+Dizziness: 3 6 7
+Hallucinations: 8 8 9
+Amnesia: 7 9 7
+Cuts and Lacerations: 4 4 6
+Bruises: 3 4 5
+Abrasions: 4 4 5
+Foreign Object Injuries: 6 5 7
