@@ -1,0 +1,93 @@
+.nurse-page {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nurse-page .view-swap {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nurse-page .view-swap:hover {
+    background-color: #45a049;
+  }
+  
+  .nurse-page h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .nurse-page h2 {
+    color: #666;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+  }
+  
+  .nurse-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nurse-page li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .nurse-page li button {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+  }
+  
+  .nurse-page li button.remove-patient {
+    background-color: #f44336; /* Red */
+  }
+  
+  .nurse-page li button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .nurse-page p {
+    margin: 5px 0;
+  }
+  
+  /* Additional details appear in a more subdued color */
+  .nurse-page div {
+    background: #e9e9e9;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .nurse-page {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  
