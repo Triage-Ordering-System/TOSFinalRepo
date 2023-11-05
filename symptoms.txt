@@ -1,0 +1,55 @@
+Nausea and vomiting: 5 6 8
+Back pain: 6
+Cough: 4
+Seizures: 8
+Bleeding: 7
+Allergic reactions: 6
+Fractures: 9
+Skin infections and abscesses: 5
+Respiratory distress: 7
+Fever in children: 4
+Burns: 7
+Stroke symptoms: 8
+Overdose or poisoning: 9
+Confusion: 6
+Disorientation: 7
+Lethargy: 6
+Somnolence: 5
+Stupor: 8
+Obtundation: 7
+Delirium: 8
+Agitation: 6
+Coma: 10
+Aphasia: 7
+Apraxia: 6
+Agnosia: 7
+Hallucinations: 8
+Memory Impairment: 6
+Personality Changes: 7
+Inattention: 4
+Incoherence: 6
+Amnesia: 7
+Psychosis: 8
+Dissociation: 6
+Cuts and Lacerations: 4
+Bruises and Contusions: 3
+Sprains: 4
+Strains: 4
+Fractures: 7
+Dislocations: 7
+Burns: 6
+Abrasions: 4
+Concussions: 7
+Head Injuries: 7
+Whiplash: 6
+Blood Clots: 8
+Sprained Ankles: 4
+Bites: 6
+Stings: 4
+Eye Injuries: 7
+Nosebleeds: 3
+Foreign Object Injuries: 6
+Broken Teeth: 7
+Dental Injuries: 6
+Soft Tissue Injuries: 5
+Overuse Injuries: 4
