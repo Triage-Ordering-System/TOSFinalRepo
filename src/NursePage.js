@@ -16,7 +16,10 @@ function NursePage() {
 
   const removePatient = (index) => {
     deleteIDselect(patientList[index]._id)
-    axios.post('http://localhost:5000/delete', patientList[index]._id)
+    const data = {
+      id: patientList[index]._id};
+    
+    axios.post('http://localhost:5000/delete', data)
     
 
     const updatedList = [...patientList];
