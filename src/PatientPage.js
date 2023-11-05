@@ -95,8 +95,8 @@ function PatientPage() {
         type="text"
         placeholder="Enter all previous illness' and other notable injuries"
         value={history}
-        className="name-input"
-        onChange={handleNameChange}
+        className="history-input"
+        onChange={handleHistoryChange}
       />
       <h3>Age</h3>
       <input
