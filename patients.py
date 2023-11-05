@@ -1,12 +1,13 @@
 
 
 class Patients:
-    def __init__(self, name, age, score, severity, list_of_symptoms_durations):
+    def __init__(self, name, age, score, severity, list_of_symptoms_durations, patient_history):
         self.name = name
         self.age = age
         self.score = score
         self.severity = severity
         self.list_of_symptoms_durations = list_of_symptoms_durations
+        self.patient_history = patient_history
         
     
     def get_name(self):
@@ -16,7 +17,7 @@ class Patients:
         return self.age
     
     def get_duration(self):
-        return self.duration
+        return int(self.list_of_symptoms_durations[0][1])
     
     def get_score(self):
         return self.score
@@ -25,14 +26,14 @@ class Patients:
         return self.list_of_symptoms_durations
     
     def add_symptom(self, symptom, duration):
-        t  = (symptom, int(duration))
+        t  = (symptom, duration)
         self.list_of_symptoms_durations += t
 
     def set_score(self, num):
-        self.score = int(num)
+        self.score = num
     
     def set_severity(self, num):
-        self.severity = int(num)
+        self.severity = num
     
     def get_severity(self):
         return self.severity
@@ -56,5 +57,4 @@ class Patients:
 #         self.severity = x
         
     
-
 

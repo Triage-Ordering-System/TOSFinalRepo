@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from patients import Patients
+import main
 
 app = Flask(__name__)
 CORS(app)
@@ -11,28 +12,31 @@ patients_list = []
 @app.route('/process_data', methods=['POST'])
 def process_data():
     data = request.json
-    print("HELP ME IM DYING")
+    
     try:
         # Creating a new patient object with the received data
         new_patient = Patients(
             name=data.get('name'),
-            age=data.get('age'),
-            score=None,  # Assuming score will be calculated or set later
-            severity=data.get('severity'),
-            list_of_symptoms_durations=[(data.get('symptom_name'), data.get('time'))]
-            
+            age=int(data.get('age')),
+            score= 0,  # Assuming score will be calculated or set later
+            severity=int(data.get('severity')),
+            list_of_symptoms_durations=[(data.get('symptom_name'), data.get('time'))],
+            #patient history
+            patient_history = data.get('patient_history')
         )
 
         # print new patient . name
         print(new_patient.get_name())
         print(new_patient.get_age())
         print(new_patient.get_severity())
-        print(new_patient.get_list_of_symptoms_durations())\
+        print(new_patient.get_list_of_symptoms_durations())
 
         # Adding the new patient to our list
         patients_list.append(new_patient)
 
         # You may want to add functionality to calculate and set the score here
+        #use main.Run
+        main.run(new_patient)
 
         return jsonify({'message': 'Patient data received and processed successfully.'}), 200
     except Exception as e:
