@@ -93,7 +93,8 @@ def run(new_patient):
     #for key, value in my_dict.items():
         #print(f"Key: {key}, Value: {value}")
 
-
-
-
+def edit(id):
+    refresh_output_file = mongo.remove_patient(id)
+    
+    return refresh_output_file
 
