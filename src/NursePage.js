@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
+import './NursePage.css';
 
 function NursePage() {
   const [patientList, setPatientList] = useState([]);
   const [deletionID, setDeletionID] = useState('');
   const navigate = useNavigate();
 
-  const deleteIDselect = (id) => {
-    setDeletionID(id)
+  const deleteIDselect = (name) => {
+    setDeletionID(name)
   }
   const patientView = () => {
     navigate(`/`);
   };
 
   const removePatient = (index) => {
-    deleteIDselect(patientList[index]._id)
+    deleteIDselect(patientList[index].name)
     const data = {
-      id: patientList[index]._id};
+      name: patientList[index].name};
     
     axios.post('http://localhost:5000/delete', data)
     
@@ -73,15 +74,12 @@ function NursePage() {
       <ul>
         {patientList.map((patient, index) => (
           <li key={index}>
-            <button onClick={() => togglePatientDetails(index)}>
-              {patient.showDetails ? 'Hide Details' : 'Show Details'}
-            </button>
+            <div>
+            <p>Name: {patient.name} | Age: {patient.age} | Score: {patient.score} | History: {patient.pastHistory}</p>
             <button onClick={() => removePatient(index)} className="remove-patient">
               X
             </button>
-            <p>Name: {patient.name}</p>
-            <p>Age: {patient.age}</p>
-            <p>Score: {patient.score}</p>
+            </div>
             {patient.showDetails && (
               <div>
                 {/* Additional patient details */}
@@ -90,6 +88,7 @@ function NursePage() {
                 <p>Duration: {patient.duration}</p>
                 <p>Past History: {patient.pastHistory}</p>
               </div>
+              
             )}
           </li>
         ))}
